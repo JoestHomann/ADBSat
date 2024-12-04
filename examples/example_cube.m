@@ -34,7 +34,7 @@ alt = 200; %km
 inc = 51.6; %deg
 env = [alt*1e3, inc/2, 0, 106, 0, 65, 65, ones(1,7)*3, 0]; % Environment variables
 
-aoa_deg = 0; % Angle of attack [deg]
+aoa_deg = 45; % Angle of attack [deg]
 aos_deg = 0; % Angle of sideslip [deg]
 
 % Model parameters

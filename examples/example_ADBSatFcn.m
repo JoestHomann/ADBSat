@@ -27,6 +27,8 @@
 
 clear
 
+tic;
+
 modName = 'cube';
 % Path to model file
 ADBSat_path = ADBSat_dynpath;
@@ -39,8 +41,8 @@ alt = 200; %km
 inc = 51.6; %deg
 env = [alt*1e3, inc/2, 0, 106, 0, 65, 65, ones(1,7)*3, 0]; % Environment variables
 
-aoa = -45:1:45; % Angle of attack
-aos = -45:1:45; % Angle of sideslip
+aoa = -5:1:5; % Angle of attack
+aos = -5:1:5; % Angle of sideslip
 
 % Model parameters
 shadow = 1;
@@ -70,5 +72,6 @@ xlabel('Angle of Sideslip')
 ylabel('Angle of Attack')
 title('Drag Force Coefficient')
 
-%------------ END CODE -----------%
+toc;
 
+%------------ END CODE -----------%

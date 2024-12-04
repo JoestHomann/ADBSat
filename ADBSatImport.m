@@ -6,7 +6,7 @@ function [ matOut ] = ADBSatImport( modIn, pathOut, verb )
 %     Areas     : Areas of the triangular faces  
 %     SurfN     : Surface normals 
 %     BariC     : Surfaces baricenters 
-%      Lref     : Refrence longitude
+%      Lref     : Reference longitude
 %
 % Inputs:
 %       fileIn  : Input filename string should include either .stl or .obj extension
