@@ -2,7 +2,7 @@
 
 tic;
 
-modName = ['source_simplified'];
+modName = ['sat_test'];
 % Path to model file
 ADBSat_path = ADBSat_dynpath;
 modIn = fullfile(ADBSat_path,'inou','obj_files',[modName,'.obj']);
