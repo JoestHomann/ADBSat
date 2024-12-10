@@ -8,7 +8,7 @@ modName = ['sat_test'];
 ADBSat_path = ADBSat_dynpath;
 modIn = fullfile(ADBSat_path,'inou','obj_files',[modName,'.obj']);
 modOut = fullfile(ADBSat_path,'inou','models');
-resOut = fullfile(ADBSat_path,'inou','results');
+respath = fullfile(ADBSat_path,'inou','results');
 
 %Input conditions
 alt = 300; %km
@@ -30,15 +30,21 @@ del = 1; % Delete temp
 
 % Start Parameters
 n=1;
-aoa = 1:1:n; % Angle of attack
-aos = 1:1:n; % Angle of sideslip
+aoaS = 1:1:n; % Angle of attack
+aosS = 1:1:n; % Angle of sideslip
+
+% Shad/Sol-Flags
+flag_shad=1;
+flag_sol=0;
+
+param=param_eq();
 
 % Import model
 modOut = ADBSatImport(modIn, modOut, verb);
 
 % Coefficient Calculation
 %output = ADBSatFcn( modOut, resOut, inparam, aoa, aos, shadow, solar, env, del, verb );
-%output = calc_coeff(fiName, respath, aoaS, aosS, param_eq, flag_shad, flag_sol, del, verb);
+output = calc_coeff(modName, respath, aoaS, aosS, param_eq, flag_shad, flag_sol, del, verb);
 
 % Table-initialisation
 LookUpTable=zeros(n,n);
