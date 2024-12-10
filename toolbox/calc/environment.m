@@ -61,6 +61,8 @@ end
 param_eq.Texo = T(1);
 param_eq.Tinf = T(2);
 
+disp(param_eq.Tinf)
+
 % Calculate mean molecular mass [g mol^-1]
 if AnO
     ND_T = (param_eq.rho(1)+param_eq.rho(2)+param_eq.rho(3)+param_eq.rho(4)+param_eq.rho(5)+param_eq.rho(7)+param_eq.rho(8)+param_eq.rho(9));
@@ -107,5 +109,7 @@ param_eq.vth = sqrt(2*data.constants.kb*param_eq.Tinf/(param_eq.mmean/data.const
 
 %Speed ratio [-]
 param_eq.s = param_eq.vinf/param_eq.vth;
+
+disp(param_eq.s)
 
 %------------- END OF CODE --------------
