@@ -64,9 +64,8 @@ while i <= n_i
    
         j = j+1;
     end
-    disp(aos)
     aos=aos-n_j;
-    disp(aos)
+    
     aoa=aoa+1;
 
     j=1;

@@ -18,11 +18,11 @@ env = [alt*1e3, inc/2, 0, 106, 0, 165, 165, ones(1,7)*15, 0]; % Environment vari
 shadow = 1;
 inparam.gsi_model = 'sentman';
 inparam.alpha = 1; % Accommodation (altitude dependent)
-inparam.Tw = 695; % Wall Temperature [K]
+inparam.Tw = 300; % Wall Temperature [K]
 
-solar = 1;
-inparam.sol_cR = 0.15; % Specular Reflectivity
-inparam.sol_cD = 0.25; % Diffuse Reflectivity
+solar = 0;
+inparam.sol_cR = 0.15; % Specular Reflectivity %TBD
+inparam.sol_cD = 0.25; % Diffuse Reflectivity  %TBD
 
 verb = 0; % Verbose
 del = 1; % Delete temp
